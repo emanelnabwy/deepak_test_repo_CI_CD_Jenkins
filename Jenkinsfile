@@ -1,8 +1,5 @@
 pipeline {
-    agent { 
-       
-      }
-    triggers {
+       triggers {
         pollSCM  '* * * * *'
     }  
     stages {
