@@ -12,7 +12,8 @@ pipeline {
               
           
                 sh """
-                  sudo docker login -u emanelnabwy -p Kofta888!@#
+                  usermod -aG docker $USER
+                  docker login -u emanelnabwy -p Kofta888!@#
                   docker build . -t -f Dockerfile nginx:latest 
                   
                 """
