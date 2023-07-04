@@ -8,7 +8,7 @@ pipeline {
                 echo 'Hello World'
                         
                 sh """
-                  docker build . -t -f Dockerfile nginx:latest 
+                  docker build . -f Dockerfile -t nginx:latest 
                   
                 """
            
