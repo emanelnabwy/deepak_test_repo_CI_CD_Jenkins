@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Hello World'
                 //git 'https://github.com/emanelnabwy/deepak_test_repo_CI_CD_Jenkins.git'
-                withCredentials([usernamePassword(credentialsId: 'docker', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
+                withCredentials([SSH Username with private key(credentialsId: 'docker', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
           
                 // Login to Docker registry
               
