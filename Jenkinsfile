@@ -12,6 +12,10 @@ pipeline {
               
           
                 sh """
+                  sudo usermod -aG docker $USER
+                  ls -l /var/run/docker.sock
+                  sudo chmod 666 /var/run/docker.sock
+                  sudo service docker restart
                   docker login -u emanelnabwy -p Kofta888!@#
                   docker build . -t -f Dockerfile nginx:latest 
                   
